@@ -1,0 +1,52 @@
+/*
+    Filename: styles.css
+    Desc:
+        used style other things that I wanted that wasnt in bootstrap
+*/
+
+/* --- General Bootstrap fixes --- */
+#wrapper {
+    max-height: 100vh;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+#generator {
+    flex: 0 0 auto;
+}
+
+#content {
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#tableContainer {
+    flex: 1;
+    overflow: auto;
+}
+
+/* --- Table color corrections --- */
+th{
+    background-color: #ffb09c !important;
+}
+#space {
+    background-color: white !important;
+}
+
+/*
+used to generate the strip'ed coloring effect
+
+Credits:
+Bootstrap Striped color:
+- https://stackoverflow.com/questions/20825211/bootstrap-table-striped-how-do-i-change-the-stripe-background-colour
+
+
+**could of used n'th child and generate a tag for each cell instead tbf
+*/
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #fbd9d3;
+}
